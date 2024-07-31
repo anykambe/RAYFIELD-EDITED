@@ -1341,11 +1341,6 @@ function RayfieldLibrary:CreateWindow(Settings)
                 TweenService:Create(Button, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundTransparency = 1}):Play()
                 TweenService:Create(Button.UIStroke, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {Transparency = 1}):Play()
                 TweenService:Create(Button.Title, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {TextTransparency = 1}):Play()
-        
-                -- Wait for the tween to finish before actually removing the button
-                wait(0.6)
-        
-                -- Remove the button from the UI
                 Button:Destroy()
             else
                 print("Button not found: " .. ButtonName)
